@@ -27,8 +27,7 @@ CharNode::CharNode(char element, string significado)
 CharNode CharNode::addChild(char element, string significado)
 {
     if (findChildChar(element) != nullptr)
-    {
-    }
+        ;
 }
 int CharNode::getSubtreesSize() {}
 CharNode *CharNode::getSubtree(int idx) {}
