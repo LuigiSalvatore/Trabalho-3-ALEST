@@ -9,8 +9,8 @@ WordTree::WordTree()
     totalNodes = 1;
     totalWords = 0;
 }
-int WordTree::getTotalWords() { return totalWords; }
-int WordTree::getTotalNodes() { return totalNodes; }
+int WordTree::getTotalWords() { return totalWords; } // feito
+int WordTree::getTotalNodes() { return totalNodes; } // feito
 void WordTree::addWord(string word, string significado) {}
 CharNode WordTree::findCharNodeForWord(string word) {}
 list<string> WordTree::searchAll(string prefix) {}
@@ -18,7 +18,7 @@ list<string> WordTree::searchAll(string prefix) {}
 //////////////////////////////////
 //          CharNode            //
 //////////////////////////////////
-CharNode::CharNode(char element, string significado)
+CharNode::CharNode(char element, string significado) // feito
 {
     father = NULL;
     character = element;
@@ -32,7 +32,7 @@ CharNode CharNode::addChild(char element, string significado)
 int CharNode::getSubtreesSize() {}
 CharNode *CharNode::getSubtree(int idx) {}
 string CharNode::getWord() {}
-CharNode *CharNode::findChildChar(char element)
+CharNode *CharNode::findChildChar(char element) // feito
 {
     list<CharNode *> auxLista = subtrees;
     while (auxLista.size())
