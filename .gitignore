@@ -1,0 +1,6 @@
+/.vscode
+/app.exe
+/main.o
+/Palavra.o
+/splitCSV.o
+/WordTree.o
