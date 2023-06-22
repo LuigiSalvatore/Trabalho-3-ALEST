@@ -16,7 +16,7 @@ public:
     // Construtor
     CharNode(char element, string significado);
     // Adiciona um filho ao nodo
-    CharNode addChild(char element, string significado);
+    CharNode *addChild(char element, string significado);
     // Identifica quantos filhos o nodo possui
     int getSubtreesSize();
     // Acessa o filho número "idx"
