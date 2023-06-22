@@ -24,11 +24,20 @@ CharNode::CharNode(char element, string significado) // feito
     character = element;
     this->significado = significado;
 }
-CharNode CharNode::addChild(char element, string significado)
+CharNode *CharNode::addChild(char element, string significado)
 {
-    if (findChildChar(element) != nullptr)
-        ;
+    CharNode *auxCharNode = findChildChar(element);
+    if (auxCharNode != nullptr)
+    {
+        auxCharNode->significado = significado;
+        return auxCharNode;
+    }
+    auxCharNode = new CharNode(element, significado);
+    subtrees.push_back(auxCharNode);
+    auxCharNode->father = this;
+    return auxCharNode;
 }
+
 int CharNode::getSubtreesSize() {}
 CharNode *CharNode::getSubtree(int idx) {}
 string CharNode::getWord() {}
