@@ -32,13 +32,17 @@ CharNode *CharNode::addChild(char element, string significado)
         auxCharNode->significado = significado;
         return auxCharNode;
     }
+
     auxCharNode = new CharNode(element, significado);
     subtrees.push_back(auxCharNode);
     auxCharNode->father = this;
     return auxCharNode;
 }
 
-int CharNode::getSubtreesSize() {}
+int CharNode::getSubtreesSize() // feito
+{
+    return (int)subtrees.size();
+}
 CharNode *CharNode::getSubtree(int idx) {}
 string CharNode::getWord() {}
 CharNode *CharNode::findChildChar(char element) // feito
