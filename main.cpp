@@ -7,6 +7,7 @@
 #include "splitCSV.hpp"
 
 using namespace std;
+
 bool carregaDicionario(string nomeArq, int quantCampos, list<Palavra> *lista);
 void imprimeLista(list<Palavra> *lista);
 
@@ -25,6 +26,7 @@ bool carregaDicionario(string nomeArq, int quantCampos, list<Palavra> *lista)
     if (!f.is_open())
         return false;
     string linhaCSV;
+
     while (getline(f, linhaCSV))
     {
         vector<string> campos = splitCSV(linhaCSV, ';');
