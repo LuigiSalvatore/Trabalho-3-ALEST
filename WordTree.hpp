@@ -2,6 +2,7 @@
 #define _WORD_TREE_
 
 #include <list>
+#include "Palavra.hpp"
 #include <string>
 using namespace std;
 
@@ -41,7 +42,7 @@ public:
     // Adiciona palavra na estrutura em árvore
     void addWord(string word, string significado);
     // Vai descendo na árvore até onde conseguir encontrar a palavra
-    CharNode findCharNodeForWord(string word);
+    CharNode *findCharNodeForWord(string word);
     // Percorre a árvore e retorna uma lista com as palavras iniciadas pelo prefixo dado.
     list<string> searchAll(string prefix);
 };

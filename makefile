@@ -10,10 +10,10 @@ all:			${APPLICATIVO}
 ${APPLICATIVO}:	${DASHOES}
 	g++ -o ${APPLICATIVO} ${DASHOES}
 
-${MAIN_NAME}.o: 		${MAIN_NAME}.cpp WordTree.cpp WordTree.hpp Palavra.cpp Palavra.hpp splitCSV.cpp splitCSV.hpp
+${MAIN_NAME}.o: 		${MAIN_NAME}.cpp WordTree.cpp WordTree.hpp splitCSV.cpp splitCSV.hpp
 	g++ ${CFLAGS} ${MAIN_NAME}.cpp
 
-WordTree.o: 			WordTree.cpp WordTree.hpp
+WordTree.o: 			WordTree.cpp WordTree.hpp Palavra.cpp Palavra.hpp
 	g++ ${CFLAGS} WordTree.cpp
 
 Palavra.o: 				Palavra.cpp Palavra.hpp
